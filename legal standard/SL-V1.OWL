@@ -1,1 +1,199 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:webprotege:ontology:b6e61f16-3404-4cf9-9235-665310d22742#"
+     xml:base="urn:webprotege:ontology:b6e61f16-3404-4cf9-9235-665310d22742"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+    <owl:Ontology rdf:about="urn:webprotege:ontology:b6e61f16-3404-4cf9-9235-665310d22742"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/identifier -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/identifier"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#hiddenLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hiddenLabel"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#prefLabel -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#prefLabel"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/RB3FPAGUD2mgt7N1Rzahut5 -->
+
+    <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RB3FPAGUD2mgt7N1Rzahut5">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:label xml:lang="fr">sali:appealsTo</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#locatedIn -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#locatedIn">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://webprotege.stanford.edu/R7L9DCFYR0vKj6NaPWqVZHU -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7L9DCFYR0vKj6NaPWqVZHU">
+        <rdfs:label xml:lang="fr">Localisation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/R8oWX0vzGhrm3MDQWEjW9un -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R8oWX0vzGhrm3MDQWEjW9un">
+        <rdfs:label xml:lang="fr">Juridictions</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBNxyftqOcry54Wu8UTYALB -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBNxyftqOcry54Wu8UTYALB">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rgxe15WrXb7ov76d1XEALY"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR-TJ-PARIS-DIV2</dc:identifier>
+        <rdfs:label xml:lang="fr">TJ - 2e div. Action publique spécialisée de Paris</rdfs:label>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2e div.</skos:definition>
+        <skos:hiddenLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2e div. TJ Paris</skos:hiddenLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Second division du tribunal judiciaire de Paris</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RSckvnself6mLgKrkFgo9a"/>
+        <rdfs:label xml:lang="fr">Paris</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RCyNeZRMhJZMehZriURcuQE -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RCyNeZRMhJZMehZriURcuQE">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rgxe15WrXb7ov76d1XEALY"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR-TJ-PARIS-DIV2</dc:identifier>
+        <rdfs:label xml:lang="fr">TJ - 3e div. JIRS / JUNALCO</rdfs:label>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3e div.</skos:definition>
+        <skos:hiddenLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">3e div. TJ Paris</skos:hiddenLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Troisième division du tribunal judiciaire de Paris</skos:prefLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RSckvnself6mLgKrkFgo9a -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RSckvnself6mLgKrkFgo9a">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7L9DCFYR0vKj6NaPWqVZHU"/>
+        <rdfs:label xml:lang="fr">France</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/Rgxe15WrXb7ov76d1XEALY -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/Rgxe15WrXb7ov76d1XEALY">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8oWX0vzGhrm3MDQWEjW9un"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR-TJ-PARIS</dc:identifier>
+        <rdfs:label xml:lang="fr">Tribunal judiciaire</rdfs:label>
+        <skos:hiddenLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">TJ Paris</skos:hiddenLabel>
+    </owl:Class>
+    
+
+
+    <!-- http://webprotege.stanford.edu/RpLD5DXb6V8GU0kMZcz9wO -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RpLD5DXb6V8GU0kMZcz9wO">
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/Rgxe15WrXb7ov76d1XEALY"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#locatedIn"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBObCi0ZebigHfrb9brnd6d"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <dc:identifier rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FR-TJ-PARIS-DIV1</dc:identifier>
+        <rdfs:label xml:lang="fr">TJ - 1ère div. Action publique générale de Paris</rdfs:label>
+        <skos:definition rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1ère div.</skos:definition>
+        <skos:hiddenLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1ère div. TJ Paris</skos:hiddenLabel>
+        <skos:prefLabel rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Première division du tribunal judiciaire de Paris</skos:prefLabel>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi -->
 
