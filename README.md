@@ -1,4 +1,4 @@
-# SKY LEGAL STANDARD (SLS)
+# ⚖️ SKY LEGAL STANDARD (SLS)
 
 **SKY LEGAL STANDARD (SLS)** is a taxonomy/ontology project designed to standardize the organization and tagging of legal data. The file `SL-V1.owl` contains the primary ontology in OWL/XML format, defining tags with unique IRIs to ensure consistency and interoperability across systems.
 
