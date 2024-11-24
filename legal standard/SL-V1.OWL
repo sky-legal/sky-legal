@@ -62,7 +62,7 @@
 
     <owl:ObjectProperty rdf:about="http://webprotege.stanford.edu/RB3FPAGUD2mgt7N1Rzahut5">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
-        <rdfs:label xml:lang="fr">sali:appealsTo</rdfs:label>
+        <rdfs:label xml:lang="fr">sls:appealsTo</rdfs:label>
     </owl:ObjectProperty>
     
 
