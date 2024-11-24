@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xmlns:base="http://exemple.org/ontologie/droit#">
+
+  <!-- Ontology Metadata -->
+  <owl:Ontology rdf:about="http://exemple.org/ontologie/droit">
+    <rdfs:comment xml:lang="fr">Cette ontologie décrit les types de droit en France.</rdfs:comment>
+    <rdfs:label xml:lang="fr">Ontologie des Types de Droit</rdfs:label>
+  </owl:Ontology>
+
+  <!-- Top-Level Class -->
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#TypeDeDroit">
+    <rdfs:label xml:lang="fr">Type de droit</rdfs:label>
+    <rdfs:comment xml:lang="fr">Un regroupement général des différentes branches du droit en France.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Public Law -->
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitPublic">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#TypeDeDroit"/>
+    <rdfs:label xml:lang="fr">Droit public</rdfs:label>
+    <rdfs:comment xml:lang="fr">Régit les relations entre les individus et les institutions publiques.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitConstitutionnel">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPublic"/>
+    <rdfs:label xml:lang="fr">Droit constitutionnel</rdfs:label>
+    <rdfs:comment xml:lang="fr">Étudie les règles fondamentales de l'État français, notamment celles définies par la Constitution.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitAdministratif">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPublic"/>
+    <rdfs:label xml:lang="fr">Droit administratif</rdfs:label>
+    <rdfs:comment xml:lang="fr">Traite des règles qui encadrent l'organisation et le fonctionnement des administrations publiques.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitFiscal">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPublic"/>
+    <rdfs:label xml:lang="fr">Droit fiscal</rdfs:label>
+    <rdfs:comment xml:lang="fr">Régit les règles liées aux impôts et aux taxes.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Private Law -->
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitPrive">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#TypeDeDroit"/>
+    <rdfs:label xml:lang="fr">Droit privé</rdfs:label>
+    <rdfs:comment xml:lang="fr">Gère les relations entre les personnes privées, physiques ou morales.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitCivil">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPrive"/>
+    <rdfs:label xml:lang="fr">Droit civil</rdfs:label>
+    <rdfs:comment xml:lang="fr">Régit les relations entre individus, incluant les contrats, la responsabilité civile, et les successions.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitCommercial">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPrive"/>
+    <rdfs:label xml:lang="fr">Droit commercial</rdfs:label>
+    <rdfs:comment xml:lang="fr">Encadre les activités des commerçants et les actes de commerce.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDuTravail">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitPrive"/>
+    <rdfs:label xml:lang="fr">Droit du travail</rdfs:label>
+    <rdfs:comment xml:lang="fr">Traite des relations entre employeurs et salariés, notamment les contrats de travail et la protection des droits des travailleurs.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Criminal Law -->
+  <owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitPenal">
+    <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#TypeDeDroit"/>
+    <rdfs:label xml:lang="fr">Droit pénal</rdfs:label>
+    <rdfs:comment xml:lang="fr">Définit les infractions et fixe les peines applicables en cas de violation de la loi.</rdfs:comment>
+  </owl:Class>
+
+  <!-- Subclasses of Droit Constitutionnel -->
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDesInstitutions">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitConstitutionnel"/>
+  <rdfs:label xml:lang="fr">Droit des institutions</rdfs:label>
+  <rdfs:comment xml:lang="fr">Étudie les institutions publiques comme le Parlement, le gouvernement, et le Conseil constitutionnel.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDesLibertesFondamentales">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitConstitutionnel"/>
+  <rdfs:label xml:lang="fr">Droit des libertés fondamentales</rdfs:label>
+  <rdfs:comment xml:lang="fr">Régit les droits fondamentaux garantis par la Constitution, comme la liberté d'expression et la liberté de culte.</rdfs:comment>
+</owl:Class>
+
+<!-- Subclasses of Droit Administratif -->
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDeLaFonctionPublique">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitAdministratif"/>
+  <rdfs:label xml:lang="fr">Droit de la fonction publique</rdfs:label>
+  <rdfs:comment xml:lang="fr">Concerne les règles applicables aux agents de la fonction publique.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#ContentieuxAdministratif">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitAdministratif"/>
+  <rdfs:label xml:lang="fr">Contentieux administratif</rdfs:label>
+  <rdfs:comment xml:lang="fr">Traite des litiges impliquant l'administration publique.</rdfs:comment>
+</owl:Class>
+
+<!-- Subclasses of Droit Civil -->
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDesContrats">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitCivil"/>
+  <rdfs:label xml:lang="fr">Droit des contrats</rdfs:label>
+  <rdfs:comment xml:lang="fr">Encadre les obligations entre les parties liées par un contrat.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDeLaResponsabiliteCivile">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitCivil"/>
+  <rdfs:label xml:lang="fr">Droit de la responsabilité civile</rdfs:label>
+  <rdfs:comment xml:lang="fr">Gère les réparations dues en cas de préjudice causé à autrui.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDesSuccessions">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitCivil"/>
+  <rdfs:label xml:lang="fr">Droit des successions</rdfs:label>
+  <rdfs:comment xml:lang="fr">Régit la transmission du patrimoine après le décès d'une personne.</rdfs:comment>
+</owl:Class>
+
+<!-- Subclasses of Droit Commercial -->
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitDesSocietes">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitCommercial"/>
+  <rdfs:label xml:lang="fr">Droit des sociétés</rdfs:label>
+  <rdfs:comment xml:lang="fr">Traite des règles relatives à la création, au fonctionnement et à la dissolution des sociétés commerciales.</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="http://exemple.org/ontologie/droit#DroitBancaire">
+  <rdfs:subClassOf rdf:resource="http://exemple.org/ontologie/droit#DroitCommercial"/>
+  <rdfs:label xml:lang="fr">Droit bancaire</rdfs:label>
+  <rdfs:comment xml:lang="fr">Encadre les activités des banques et les relations entre banques et clients.</rdfs:comment>
+</owl:Class>
+
+
+</rdf:RDF>
