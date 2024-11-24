@@ -1,6 +1,6 @@
 # ⚖️ SKY LEGAL STANDARD (SLS)
 
-**SKY LEGAL STANDARD (SLS)** is a taxonomy/ontology initiative designed to standardize the organization and tagging of legal data. The file `SL-V1.owl` provides the primary ontology in OWL/XML format, offering unique IRIs for consistent and interoperable legal data representation. Below is an adaptation showcasing its application to the **"Types de droit"** ontology in French law.
+**SKY LEGAL STANDARD (SLS)** is a taxonomy/ontology initiative designed to standardize the organization and tagging of legal data. The file `DemoOntologieDroitFrancais.OWL` provides the primary ontology in OWL/XML format, offering unique IRIs for consistent and interoperable legal data representation. Below is an adaptation showcasing its application to the **"Types de droit"** ontology in French law.
 
 ---
 
@@ -99,4 +99,4 @@ By integrating the **"Types de droit" ontology** into the SLS framework, French 
 
 ## Explore More
 
-For more details, explore the `SL-V1.owl` file or use tools like [WebProtégé](https://webprotege.stanford.edu/).
+For more details, explore the `DemoOntologieDroitFrancais.OWL` file or use tools like [WebProtégé](https://webprotege.stanford.edu/).
