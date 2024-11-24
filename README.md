@@ -23,7 +23,7 @@ A case related to public employee rights is tagged using the ontology:
   - `SubAreaOfLaw: Droit de la fonction publique`
   - `Service: Contentieux administratif`
   - `Forum: Conseil d'État`
-- **Outcome**: This enables easy retrieval and consistent categorization across legal systems.
+ **Outcome**: This enables easy retrieval and consistent categorization across legal systems.
 
 ---
 
