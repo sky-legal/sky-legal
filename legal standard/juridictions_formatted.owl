@@ -7,7 +7,6 @@
          xml:base="http://example.org/juridictions.owl"
          xmlns="http://example.org/juridictions.owl#">
 
-  <!-- Déclaration de l'ontologie -->
   <owl:Ontology rdf:about="http://example.org/juridictions.owl"/>
 
   <owl:ObjectProperty rdf:about="#faitAppelA">
