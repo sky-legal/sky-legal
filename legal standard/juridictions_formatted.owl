@@ -1,0 +1,1466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ontologie des juridictions françaises -->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+         xml:base="http://example.org/juridictions.owl"
+         xmlns="http://example.org/juridictions.owl#">
+
+  <!-- Déclaration de l'ontologie -->
+  <owl:Ontology rdf:about="http://example.org/juridictions.owl"/>
+
+  <owl:ObjectProperty rdf:about="#faitAppelA">
+    <rdfs:label xml:lang="fr">fait appel à</rdfs:label>
+    <rdfs:domain rdf:resource="#tribunalAdministratif"/>
+    <rdfs:range rdf:resource="#courAdministrativeDAppel"/>
+  </owl:ObjectProperty>
+
+  <owl:Class rdf:about="#juridiction">
+    <rdfs:label xml:lang="fr">Juridiction</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#juridictionAdministrative">
+    <rdfs:label xml:lang="fr">Juridiction Administrative</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridiction"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#conseilDEtat">
+    <rdfs:label xml:lang="fr">Conseil d'État</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionAdministrative"/>
+    <rdfs:comment xml:lang="fr">Le Conseil d'État est la plus haute juridiction de l'ordre administratif français. Il a un double rôle :
+                        - Conseiller le gouvernement dans la préparation des lois et des ordonnances
+                        - Juger en dernier ressort les litiges entre les citoyens et l'administration</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppel">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionAdministrative"/>
+    <rdfs:comment xml:lang="fr">La Cour administrative d'appel est la juridiction d'appel des jugements des tribunaux administratifs.
+                        Elle examine les recours formés contre les jugements des tribunaux administratifs.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratif">
+    <rdfs:label xml:lang="fr">Tribunal Administratif</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionAdministrative"/>
+    <rdfs:comment xml:lang="fr">Le tribunal administratif est la juridiction administrative de droit commun de première instance.
+                        Il juge la plupart des litiges entre les particuliers et les administrations.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#juridictionPenale">
+    <rdfs:label xml:lang="fr">Juridiction Pénale</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridiction"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#juridictionCivile">
+    <rdfs:label xml:lang="fr">Juridiction Civile</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridiction"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaire">
+    <rdfs:label xml:lang="fr">Tribunal Judiciaire</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionCivile"/>
+    <rdfs:comment xml:lang="fr">Le tribunal judiciaire traite toutes les affaires civiles (par exemple : conflit de voisinage, contrat mal exécuté, dette impayée) qui n'ont pas été attribuées à un autre tribunal. Dans ces cas, le tribunal judiciaire est compétent quelle que soit la valeur du litige (inférieure ou supérieure à 10 000 €).
+
+Il juge également les affaires familiales (par exemple, les divorces ou les demandes de pensions alimentaires pour un enfant) et les affaires de succession.
+
+En plus du tribunal judiciaire, il existe des tribunaux de proximité.
+
+Le tribunal de proximité traite les litiges dont la valeur est inférieure à 5 000 €.</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#conseilDePrudhommes">
+    <rdfs:label xml:lang="fr">Conseil de Prud'hommes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionCivile"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDeCommerce">
+    <rdfs:label xml:lang="fr">Tribunal de Commerce</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionCivile"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalParitaireDesBauxRuraux">
+    <rdfs:label xml:lang="fr">Tribunal Paritaire des Baux Ruraux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#juridictionCivile"/>
+  </owl:Class>
+
+  <!-- Tribunaux Judiciaires -->
+  <owl:Class rdf:about="#tribunalJudiciaireDesSablesDOlonne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire des Sables-d'Olonne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAlencon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Alençon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLorient">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Lorient</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintEtienne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Etienne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLille">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Lille</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDArgentan">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Argentan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMulhouse">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Mulhouse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaverne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saverne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChartres">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Chartres</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDieppe">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Dieppe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDuHavre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire du Havre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeParis">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Paris</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAngers">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Angers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBordeaux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bordeaux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeTroyes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Troyes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVersailles">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Versailles</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDunkerque">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Dunkerque</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLaon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Laon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAles">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Alès</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintPierre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Pierre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMacon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Mâcon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontpellier">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Montpellier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDigneLesBains">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Digne-les-Bains</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDEvreux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Evreux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBesancon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Besançon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePau">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Pau</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNimes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nîmes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDePremiereInstanceDeNoumea">
+    <rdfs:label xml:lang="fr">Tribunal de Première Instance de Nouméa</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLimoges">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Limoges</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeValence">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Valence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeGueret">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Guéret</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCoutances">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Coutances</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLonsLeSaunier">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Lons-le-Saunier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontauban">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Montauban</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBasseTerre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Basse-Terre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeFontainebleau">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Fontainebleau</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeValenciennes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Valenciennes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDuMans">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire du Mans</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePerigueux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Périgueux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMetz">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Metz</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeRennes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Rennes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePontoise">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Pontoise</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePrivas">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Privas</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBeziers">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Béziers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontbeliard">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Montbéliard</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#sectionDetacheeDuTribunalDePremiereInstanceALifou">
+    <rdfs:label xml:lang="fr">Section Détachée du Tribunal de Première Instance à Lifou</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeTarbes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Tarbes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDePremiereInstanceDePapeete">
+    <rdfs:label xml:lang="fr">Tribunal de Première Instance de Papeete</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBayonne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bayonne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#sectionDetacheeDuTribunalDePremiereInstanceAKone">
+    <rdfs:label xml:lang="fr">Section Détachée du Tribunal de Première Instance à Koné</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVienne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Vienne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDePremiereInstanceDeMataUtu">
+    <rdfs:label xml:lang="fr">Tribunal de Première Instance de Mata-Utu</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBastia">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bastia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNantes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nantes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVannes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Vannes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#sectionDetacheeDuTribunalDePremiereInstanceANukuHiva">
+    <rdfs:label xml:lang="fr">Section Détachée du Tribunal de Première Instance à Nuku-Hiva</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeTours">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Tours</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontlucon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Montluçon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDraguignan">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Draguignan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeQuimper">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Quimper</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeToulouse">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Toulouse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAlbertville">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Albertville</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCusset">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Cusset</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDuPuyEnVelay">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire du Puy-en-Velay</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCayenne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Cayenne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBobigny">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bobigny</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDVryCourcouronnes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Évry-Courcouronnes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeTarascon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Tarascon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMamoudzou">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Mamoudzou</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeStGaudens">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de St Gaudens</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAlbi">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Albi</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintQuentin">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Quentin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChateauroux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Châteauroux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAgen">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Agen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCaen">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Caen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeClermontFerrand">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Clermont-Ferrand</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBourgEnBresse">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bourg-en-Bresse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNiort">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Niort</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChalonSurSaone">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Chalon-sur-Saône</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMarseille">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Marseille</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLyon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Lyon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDouai">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Douai</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeRoanne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Roanne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBlois">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Blois</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#sectionDetacheeDuTribunalDePremiereInstanceARaiatea">
+    <rdfs:label xml:lang="fr">Section Détachée du Tribunal de Première Instance à Raïatéa</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePerpignan">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Perpignan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBelfort">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Belfort</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCompiegne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Compiègne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCreteil">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Créteil</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeStrasbourg">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Strasbourg</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeTulle">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Tulle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVerdun">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Verdun</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMeaux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Meaux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChalonsEnChampagne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Châlons-en-Champagne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePoitiers">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Poitiers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaumur">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saumur</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBrest">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Brest</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAnnecy">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Annecy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBourges">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bourges</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintDenisDeLaReunion">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Denis-de-La-Réunion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeReims">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Reims</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintOmer">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Omer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCambrai">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Cambrai</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontDeMarsan">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Mont-de-Marsan</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBethune">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Béthune</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeRodez">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Rodez</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNevers">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nevers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNice">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMontargis">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Montargis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBeauvais">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Beauvais</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAmiens">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Amiens</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVesoul">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Vesoul</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeColmar">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Colmar</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDArras">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Arras</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeGrenoble">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Grenoble</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDePointeAPitre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Pointe-à-Pitre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSarreguemines">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Sarreguemines</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBriveLaGaillarde">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Brive-la-Gaillarde</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDOrleans">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Orléans</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDijon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Dijon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChaumont">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Chaumont</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintBrieuc">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Brieuc</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMelun">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Melun</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAuch">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Auch</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCarcassonne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Carcassonne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeFortDeFrance">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Fort-de-France</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBonneville">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bonneville</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAurillac">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Aurillac</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeGrasse">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Grasse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBarLeDuc">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bar-le-Duc</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeValDeBriey">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Val de Briey</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintMalo">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Malo</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMoulins">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Moulins</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBergerac">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bergerac</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNanterre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nanterre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeMende">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Mende</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeVillefrancheSurSaone">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Villefranche-sur-Saône</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSenlis">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Senlis</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintes">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saintes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCahors">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Cahors</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDePremiereInstanceDeSaintPierreEtMiquelon">
+    <rdfs:label xml:lang="fr">Tribunal de Première Instance de Saint-Pierre-et-Miquelon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBourgoinJallieu">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Bourgoin-Jallieu</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCharlevilleMezieres">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Charleville-Mézières</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLibourne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Libourne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAixEnProvence">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Aix-en-Provence</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNarbonne">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Narbonne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAuxerre">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Auxerre</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeNancy">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Nancy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeChambery">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Chambéry</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSaintNazaire">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Saint-Nazaire</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeBoulogneSurMer">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Boulogne-sur-Mer</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeFoix">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Foix</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeThononLesBains">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Thonon-les-Bains</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLaRochelle">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de La Rochelle</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDEpinal">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Epinal</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAjaccio">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Ajaccio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeRouen">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Rouen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeToulon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Toulon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalDePremiereInstanceDeNoumea">
+    <rdfs:label xml:lang="fr">Tribunal de Première Instance de Nouméa</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLaRocheSurYon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de La Roche-sur-Yon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAngouleme">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Angoulême</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeGap">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Gap</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeDax">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Dax</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCherbourgEnCotentin">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Cherbourg-en-Cotentin</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCarpentras">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Carpentras</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAvesnesSurHelpe">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Avesnes-sur-Helpe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLaval">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Laval</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeThionville">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Thionville</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSoissons">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Soissons</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDAvignon">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire d'Avignon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeSens">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Sens</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeLisieux">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Lisieux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalJudiciaireDeCastres">
+    <rdfs:label xml:lang="fr">Tribunal judiciaire de Castres</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalJudiciaire"/>
+  </owl:Class>
+
+  <!-- Cours Administratives d'Appel -->
+  <owl:Class rdf:about="#courAdministrativeDAppelDeBordeaux">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Bordeaux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">17-19 rue du Maréchal Joffre, 33074 Bordeaux - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeDouai">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Douai</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">50 rue de la Comédie, 59507 Douai - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeLyon">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Lyon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">184 rue Duguesclin, 69433 Lyon - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeMarseille">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Marseille</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">45 boulevard Paul Peytral, 13291 Marseille - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeNancy">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Nancy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">4 rue Piroux, 54035 Nancy - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeNantes">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Nantes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">2 place de l'Edit de Nantes, 44041 Nantes - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeParis">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Paris</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">68 rue François Miron, 75004 Paris - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeToulouse">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Toulouse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">68 rue Raymond IV, 31068 Toulouse - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#courAdministrativeDAppelDeVersailles">
+    <rdfs:label xml:lang="fr">Cour Administrative d'Appel de Versailles</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#courAdministrativeDAppel"/>
+    <rdfs:comment xml:lang="fr">2 esplanade Grand Siècle, 78000 Versailles - Juridiction d'appel des jugements des tribunaux administratifs</rdfs:comment>
+  </owl:Class>
+
+  <!-- Tribunaux Administratifs -->
+  <owl:Class rdf:about="#tribunalAdministratifDAmiens">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Amiens</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeDouai"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">14 rue Lemerchier, 80011 Amiens - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeBastia">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Bastia</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Villa Montépiano, 20407 Bastia - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeBesancon">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Besançon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNancy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">30 rue Charles Nodier, 25044 Besançon - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeBordeaux">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Bordeaux</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">17 cours de Verdun, 33074 Bordeaux - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeCaen">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Caen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNantes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">3 rue Arthur Le Duc, 14050 Caen - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeCergyPontoise">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Cergy-Pontoise</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeVersailles"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">2-4 boulevard de l'Hautil, 95027 Cergy-Pontoise - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeChalonsEnChampagne">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Châlons-en-Champagne</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNancy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">25 rue du Lycée, 51036 Châlons-en-Champagne - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeClermontFerrand">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Clermont-Ferrand</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeLyon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">6 cours Sablon, 63033 Clermont-Ferrand - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeDijon">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Dijon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeLyon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">22 rue d'Assas, 21016 Dijon - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeGrenoble">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Grenoble</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeLyon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">2 place de Verdun, 38022 Grenoble - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeLille">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Lille</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeDouai"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">143 rue Jacquemars Giélée, 59014 Lille - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeLimoges">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Limoges</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">1 cours Vergniaud, 87000 Limoges - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeLyon">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Lyon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeLyon"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">184 rue Duguesclin, 69433 Lyon - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMarseille">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Marseille</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">22-24 rue Breteuil, 13281 Marseille - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMelun">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Melun</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeParis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">43 rue du Général de Gaulle, 77008 Melun - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMontpellier">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Montpellier</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">6 rue Pitot, 34063 Montpellier - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMontreuil">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Montreuil</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeParis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">7 rue Catherine Puig, 93104 Montreuil - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeNancy">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Nancy</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNancy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">5 place Carrière, 54036 Nancy - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeNantes">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Nantes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNantes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">6 allée de l'Ile-Gloriette, 44041 Nantes - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeNice">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Nice</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">18 avenue des Fleurs, 06050 Nice - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeNimes">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Nîmes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">16 avenue Feuchères, 30941 Nîmes - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDOrleans">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Orléans</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNantes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">28 rue de la Bretonnerie, 45057 Orléans - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeParis">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Paris</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeParis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">7 rue de Jouy, 75181 Paris - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDePau">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Pau</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">50 cours Lyautey, 64010 Pau - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDePoitiers">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Poitiers</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">15 rue de Blossac, 86000 Poitiers - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeRennes">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Rennes</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNantes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">3 contour de la Motte, 35044 Rennes - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeRouen">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Rouen</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeDouai"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">53 avenue Gustave Flaubert, 76000 Rouen - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeStrasbourg">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Strasbourg</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNancy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">31 avenue de la Paix, 67070 Strasbourg - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeToulouse">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Toulouse</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">68 rue Raymond IV, 31068 Toulouse - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeVersailles">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Versailles</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeVersailles"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">56 avenue de Saint-Cloud, 78011 Versailles - Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDAjaccio">
+    <rdfs:label xml:lang="fr">Tribunal Administratif d'Ajaccio</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeBrest">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Brest</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeNantes"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeToulon">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Toulon</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeMarseille"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMayotte">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Mayotte</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeParis"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeGuadeloupe">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Guadeloupe</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeGuyane">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Guyane</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeLaReunion">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de La Réunion</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+  <owl:Class rdf:about="#tribunalAdministratifDeMartinique">
+    <rdfs:label xml:lang="fr">Tribunal Administratif de Martinique</rdfs:label>
+    <rdfs:subClassOf rdf:resource="#tribunalAdministratif"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="#faitAppelA"/>
+        <owl:hasValue rdf:resource="#courAdministrativeDAppelDeBordeaux"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:comment xml:lang="fr">Juridiction administrative de première instance</rdfs:comment>
+  </owl:Class>
+
+</rdf:RDF>
